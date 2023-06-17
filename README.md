@@ -102,7 +102,7 @@ them navigate and understand the usage of the platform.
 
 ![image](https://github.com/Denada-Bali/SendMoneyOnline/assets/86987951/5cb31885-454d-4e94-9938-c8e8ff49b7fa)
 
-![image](https://github.com/Denada-Bali/SendMoneyOnline/assets/86987951/9c7db05e-0895-4bb2-957c-70eceee77f3d)
+![image](https://github.com/Denada-Bali/SendMoneyOnline/assets/86987951/2213ad61-2588-45ef-9b3e-27d09e362d84)
 
 
 
