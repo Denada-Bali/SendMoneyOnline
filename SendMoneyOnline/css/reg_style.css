@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Convergence&display=swap');
+
+h2.blue {
+    position: relative;
+    font-size: 4em;
+    color: #00c3ff1e;
+    font-family: 'Convergence',
+        sans-serif;
+    padding: 10px;
+}
+
+body {
+    height: 100vh;
+    font-size: 1.2rem;
+}
+
+/*h2.blue::before {
+    content: attr(data-text);
+    position: absolute;
+    width: 100px;
+    color: #00c3ff;
+    overflow: hidden;
+    white-space: nowrap;
+    border-radius: 4p solid #00c3ff;
+    animation: animate 8s linear infinite;
+    filter: drop-shadow(0 0 20px #00c3ff) drop-shadow(0 0 50px #00c3ff);
+}
+@keyframes animate {
+
+    0%,
+    10%,
+    100% {
+        width: 0;
+    }
+
+    70%,
+    90% {
+        width: 100%;
+    }
+}
+
+*,
+*::before *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}*/
+
+.re_form {
+    position: relative;
+    width: 20rem;
+    height: 3rem;
+    margin: 30px;
+}
+
+.regform_input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #e1e5ee;
+    border-radius: 0.5rem;
+    font-family: inherit;
+    font-size: inherit;
+    color: #000000;
+    outline: none;
+    padding: 1.25rem;
+    background: none;
+    transition: all 160ms ease-in;
+}
+
+.regform_input:hover {
+    border-color: #00c3ff69
+}
+
+.regform_input:focus {
+    border-color: #000000fd;
+}
+
+.regform_label {
+    position: absolute;
+    left: 1rem;
+    top: 0.8rem;
+    padding: 0 0.5rem;
+    color: #777474;
+    cursor: text;
+    transition: top 200ms ease-in, left 200ms ease-in font-size 200ms ease-in;
+    background-color: #fff;
+}
+
+
+.regform_input:focus~.regform_label,
+.regform_input:not(:placeholder-shown).regform_input:not(:focus)~.regform_label {
+    top: -0.5rem;
+    font-size: 0.8rem;
+    left: 0.8rem;
+}
+
+/*
+*/
+.re_form_popup {
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+    border-radius: 20px;
+}
+
+/* Add styles to the form container */
+.re_form_container {
+    max-width: 400px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+
+/* Set a style for the submit/login button */
+.re_form_container .re-btn {
+    background-color: #00c3ff;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    opacity: 0.8;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    transition: .4s ease-in;
+    border-radius: 10px;
+}
+
+.re_form_container .re-btn:hover {
+    background-color: #00c3ff;
+    box-shadow: 0px 0px 5px #00c3ff, 0px 0px 25px #00c3ff, 0px 0px 50px #00c3ff
+        /*, 0px 0px 200px yellow*/
+    ;
+
+}
+
+/* Add a red background color to the cancel button */
+.re_form_container .re-cancel {
+    color: #000000;
+    background: #ffffff;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 4px;
+    height: 20px;
+    width: 20px;
+    border-radius: 0;
+    opacity: 1;
+    position: absolute;
+    left: auto;
+    right: 8px;
+    top: 20px;
+    z-index: 1;
+}
+
+.radio-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.radio-title-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.input-radio-container {
+    position: relative;
+    height: 7rem;
+    width: 7rem;
+    margin: 0.5rem;
+}
+
+.input-radio-container input {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 0;
+}
+
+.input-radio-container .radio-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border: 2px solid #07afd9;
+    border-radius: 8px;
+    transition: all 300ms ease;
+
+}
+
+.input-radio-container ion-icon {
+    color: #07afd9;
+    font-size: 3rem;
+}
+
+.input-radio-container label {
+    color: #07afd9;
+    font-size: 0.80rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+}
+
+input:checked+.radio-title {
+    background-color: #07afd9;
+    box-shadow: 0 0 12px #07afd9;
+}
+
+input:hover+.radio-title {
+
+    box-shadow: 0 0 12px #07afd9;
+}
+
+input:hover+.radio-title span {
+    visibility: visible;
+
+
+}
+
+input:checked+.radio-title ion-icon,
+input:checked+.radio-title label {
+    color: white;
+}
+
+/*
+.input-radio-container form label input[type=radio]:checked+span {
+
+    position: absolute;
+    display: inline-block;
+    right: 100%;
+    top: -5px;
+    margin: 0 0 0 20px;
+    padding: 8px 15px;
+    font-size: 12px;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+    white-space: nowrap;
+    background-color: rgba(34, 34, 34, 0.9);
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(34, 34, 34, 0.2);
+    clear: both;
+    visibility: visible;
+transform: translateX(0px);
+transition: transform 200ms ease;
+
+
+}
+
+.radio-container form label input[type=radio]:checked+span:before {
+    position: absolute;
+    content: "";
+    top: 4px;
+    left: -1px;
+    border-top: 8px solid transparent;
+    border-right: 8px solid rgba(34, 34, 34, 0.9);
+    transform: rotate(45deg);
+
+}*/
+
+#business:disabled {
+    /* Specify the desired color */
+    color: #a8a4a4;
+    opacity: 0.9;
+    pointer-events: none;
+}
